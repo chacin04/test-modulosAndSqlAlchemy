@@ -3,7 +3,7 @@ import pprint
 
 pp= pprint.PrettyPrinter(indent=4)
 # Conectarse a la base de datos
-engine = create_engine('postgresql://postgres:prueba1@localhost:5432/produccion')
+engine = create_engine('postgresql://postgres:clavechula123@10.1.30.159:5432/produccion')
 
 # Obtener un objeto MetaData
 metadata = MetaData()
@@ -20,7 +20,7 @@ def nameTables ():
         print("")
     else:
         print("*********")
-        print(len(tablas))
+        print(f"Numeros de tablas = {len(tablas)}")
 # Acceder a una tabla específica
 mi_tabla = Table('compradores', metadata, autoload=True, autoload_with=engine)
 
